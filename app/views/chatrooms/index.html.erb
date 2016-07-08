@@ -1,0 +1,28 @@
+<div class="row col-md-8 col-md-offset-2" id="chatroom-title">
+  <h1>Chatrooms</h1>
+</div>
+<div class="row col-md-8 col-md-offset-2" id="chatrooms">
+  <% if @chatrooms.any? %>
+    <div>
+      <p>Choose chatroom</p>
+        <ul id="chatroom-index"> 
+          <%= render @chatrooms%>
+        </ul>
+    </div>
+    ---------------------------------
+  <% end %>
+  <div class="chatroom-form">
+    <% unless @chatrooms.any? %>
+      <p>NO CHATROOM FOUND</p>
+    <% end %>
+    <%= form_for @chatroom do |f| %>
+      <p>create a chatroom</p>
+      <div class="input-group">
+        <span class="input-group-addon">chatroom name:</span>
+        <%= f.text_field :topic, class: "form-control"%>
+      </div>
+      <%= f.submit class: "btn btn-primary", id: "create-chatroom" %>
+    <% end %>
+  </div>
+  <div id="chatroom-errors"></div>
+</div>
