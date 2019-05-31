@@ -1,7 +1,5 @@
-> Tech stack details - 
-* Ruby on rails (version 5.0.0.beta3)
-* Ruby (version 2.3.1)
-
+### Summary:  
+Chat application using Rails5
 
 > Prerequisites - 
 * Redis should be installed
